@@ -5,7 +5,7 @@
 
 ### All the code you need (which you've seen in the video), using this library is:
 ```
-<svg style="background: rgb(240,240,240)" height="600" width="1500"></svg>		
+<svg height="600" width="1500"></svg>		
 <button class="create-new-element" style="display: block;">Create new element</button>
 <button class="connect-elements" style="display: block;">Connect elements</button>
 
