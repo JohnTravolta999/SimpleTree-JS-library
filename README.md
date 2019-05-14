@@ -21,19 +21,19 @@
 </script>
 ```
 
-#### You can get "Nodes to connections" info by using `ST.nodesToConnections` The structure of it:
+#### You can get "Nodes to connections" info by using `ST.nodesToConnections`. The structure of it:
 ```
 nodeID_1: Array [ connectionID_1_1, connectionID_1_2 ],
 nodeID_2: Array [ connectionID_2_1, connectionID_2_2 ]
 ```
 
-#### You can get "Nodes to nodes" info by using `ST.nodesToNodes` The structure of it:
+#### You can get "Nodes to nodes" info by using `ST.nodesToNodes`. The structure of it:
 ```
 nodeID_1: Array [ connectedNodeID_1_1, connectedNodeID_1_2 ],
 nodeID_2: Array [ connectedNodeID_2_1, connectedNodeID_2_2 ]
 ```
 
-#### You can get info about "Connections" by `ST.connections` The structure:
+#### You can get info about "Connections" by `ST.connections`. The structure:
 ```
 connectionID:
   {
