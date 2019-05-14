@@ -1,7 +1,9 @@
 **It is a library called "Simple Tree" to create an hierarchical tree using svg**   
 Short video of usage https://drive.google.com/file/d/1JJxbXdElmZlpX_YR9Kt18qrrwzJ3Lv-Y/view
 
-***It is not finished yet. The next step will be expanding `createNode` function to create nodes (elements) by different settings***
+***It is not finished yet. The next step will be expanding `createNode` function to create nodes (elements) with different settings***
+
+
 
 All the code you need, using this library (which is not finished yet) is:
 
