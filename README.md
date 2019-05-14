@@ -1,12 +1,10 @@
-**It is a library called "Simple Tree" to create an hierarchical tree using svg**  
-Short video of usage https://drive.google.com/file/d/1JJxbXdElmZlpX_YR9Kt18qrrwzJ3Lv-Y/view
+## It is a library called "Simple Tree" to create an hierarchical tree using svg
+*Short video of usage* ![Video](//https://drive.google.com/file/d/1JJxbXdElmZlpX_YR9Kt18qrrwzJ3Lv-Y/view "Look the video")
 
 ***It is not finished yet. The next step will be expanding `createNode` function to create nodes (elements) with different settings***  
-  
-    
-      
-All the code you need, using this library (which is not finished yet) is:
 
+### All the code you need, using this library is:
+```
 <svg style="background: rgb(240,240,240)" height="600" width="1500"></svg>		
 <button class="create-new-element" style="display: block;">Create new element</button>
 <button class="connect-elements" style="display: block;">Connect elements</button>
@@ -21,19 +19,22 @@ All the code you need, using this library (which is not finished yet) is:
   }
   ST.drag(dragOptions);
 </script>
+```
 
-    You can get "Nodes to connections" info by using ST.nodesToConnections The structure of it:
-
+#### You can get "Nodes to connections" info by using ST.nodesToConnections The structure of it:
+```
 nodeID_1: Array [ connectionID_1_1, connectionID_1_2 ],
 nodeID_2: Array [ connectionID_2_1, connectionID_2_2 ]
+```
 
-    You can get "Nodes to nodes" info by using ST.nodesToNodes The structure of it:
-
+#### You can get "Nodes to nodes" info by using ST.nodesToNodes The structure of it:
+```
 nodeID_1: Array [ connectedNodeID_1_1, connectedNodeID_1_2 ],
 nodeID_2: Array [ connectedNodeID_2_1, connectedNodeID_2_2 ]
+```
 
-    You can get info about "Connections" by ST.connections The structure:
-
+#### You can get info about "Connections" by ST.connections The structure:
+```
 connectionID:
   {
     fromNodeID: nodeID,
@@ -43,3 +44,4 @@ connectionID:
     y1: (int),
     y2: (int)
  }
+```
