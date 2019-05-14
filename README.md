@@ -2,9 +2,9 @@
 Short video of usage https://drive.google.com/file/d/1JJxbXdElmZlpX_YR9Kt18qrrwzJ3Lv-Y/view
 
 ***It is not finished yet. The next step will be expanding `createNode` function to create nodes (elements) with different settings***
-
-
-
+   
+   
+   
 All the code you need, using this library (which is not finished yet) is:
 
 <svg style="background: rgb(240,240,240)" height="600" width="1500"></svg>		
