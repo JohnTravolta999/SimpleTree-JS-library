@@ -284,10 +284,6 @@ function simpleTree(dragOptions) {
 	}
 
 	var setConnectionsData = (fromDataID, toDataID, pathID) => {
-		// var fromG = document.querySelector('g[data-id="' + fromDataID + '"]');
-		// var toG = document.querySelector('g[data-id="' + toDataID + '"]');
-		// var gArr = [fromG, toG];
-
 		var gArr = [fromDataID, toDataID];
 
 		this.connections[pathID] = {
