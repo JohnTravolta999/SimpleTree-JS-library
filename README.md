@@ -3,7 +3,7 @@
 
 ***It is not finished yet. The next step will be expanding `createNode` function to create nodes (elements) with different settings***  
 
-### All the code you need (which you've seen in the video), using this library is:
+### All the code you need (which you've seen in the video), using this library, is:
 ```
 /*** HTML (index.html) ***/
 <svg></svg>
