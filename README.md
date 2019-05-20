@@ -5,12 +5,12 @@
 
 ### All the code you need (which you've seen in the video), using this library is:
 ```
-# HTML
+# HTML (index.html)
 <svg></svg>
 <button class="button create-new-element">Create new element</button>
 <button class="button connect-elements">Connect elements</button>
 
-# JavaScript
+# JavaScript (custom.js)
 var ST = new simpleTree();
 document.querySelector('button.create-new-element').addEventListener('click', ST.createNode);
 document.querySelector('button.connect-elements').addEventListener('click', ST.createConnection);
@@ -21,6 +21,8 @@ dragOptions = {
 }
 ST.drag(dragOptions);
 ```
+
+***The library itself is in the file simpleTree.js***
 
 #### You can get "Nodes to connections" info by using `ST.nodesToConnections`. The structure of it:
 ```
