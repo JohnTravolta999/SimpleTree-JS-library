@@ -28,12 +28,14 @@ text {
   user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
+#controls {
+  display: flex;
+}
+
 .button{
-  display: inline-block;
-  *display: inline;
-  zoom: 1;
+  display: block;
   padding: 6px 15px;
-  margin: 0;
+  margin-right: 5px;
   cursor: pointer;
   border: 1px solid #bbb;
   overflow: visible;
