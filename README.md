@@ -5,14 +5,14 @@
 
 ### All the code you need (which you've seen in the video), using this library is:
 ```
-# HTML (index.html)
+/*** HTML (index.html) ***/
 <svg></svg>
 <div id="controls">
 	<button class="button create-new-element">Create new element</button>
 	<button class="button connect-elements">Connect elements</button>
 </div>
 
-# JavaScript (custom.js)
+/*** JavaScript (custom.js) ***/
 var ST = new simpleTree();
 document.querySelector('button.create-new-element').addEventListener('click', ST.createNode);
 document.querySelector('button.connect-elements').addEventListener('click', ST.createConnection);
