@@ -5,20 +5,21 @@
 
 ### All the code you need (which you've seen in the video), using this library is:
 ```
-<svg height="600" width="1500"></svg>		
-<button class="create-new-element" style="display: block;">Create new element</button>
-<button class="connect-elements" style="display: block;">Connect elements</button>
+# HTML
+<svg></svg>
+<button class="button create-new-element">Create new element</button>
+<button class="button connect-elements">Connect elements</button>
 
-<script>
-  var ST = new simpleTree();
-  document.querySelector('button.create-new-element').addEventListener('click', ST.createNode);
-  document.querySelector('button.connect-elements').addEventListener('click', ST.createConnection);
-  dragOptions = {
-    horizontal : true, // if the param will be false, nodes will not be drugged on X coordinate
-    vertical : true // if the param will be false, nodes will not be drugged only on Y coordinate
-  }
-  ST.drag(dragOptions);
-</script>
+# JavaScript
+var ST = new simpleTree();
+document.querySelector('button.create-new-element').addEventListener('click', ST.createNode);
+document.querySelector('button.connect-elements').addEventListener('click', ST.createConnection);
+
+dragOptions = {
+	horizontal : true, // if the param will be false, nodes will not be drugged on X coordinate
+	vertical : true // if the param will be false, nodes will not be drugged only on Y coordinate
+}
+ST.drag(dragOptions);
 ```
 
 #### You can get "Nodes to connections" info by using `ST.nodesToConnections`. The structure of it:
