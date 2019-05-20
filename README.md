@@ -7,8 +7,10 @@
 ```
 # HTML (index.html)
 <svg></svg>
-<button class="button create-new-element">Create new element</button>
-<button class="button connect-elements">Connect elements</button>
+<div id="controls">
+	<button class="button create-new-element">Create new element</button>
+	<button class="button connect-elements">Connect elements</button>
+</div>
 
 # JavaScript (custom.js)
 var ST = new simpleTree();
