@@ -1,5 +1,5 @@
 ## "Simple Tree" is a library to create an hierarchical tree using svg
-*Short video of usage* https://drive.google.com/file/d/1JJxbXdElmZlpX_YR9Kt18qrrwzJ3Lv-Y/view
+*Short video of usage* https://drive.google.com/file/d/1mpVtnx56nueAdasNLQOliJ824IzuDJfE/view
 
 ***It is not finished yet. The next step will be expanding `createNode` function to create nodes (elements) with different settings***  
 
