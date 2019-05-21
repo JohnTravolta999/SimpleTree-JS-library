@@ -322,8 +322,6 @@ function simpleTree(dragOptions) {
 			} else {
 				this.nodesToNodes[baseID] = [connectedID];
 			}
-			
-		// we need bind(this) in order to use simpleTree's this inside forEach
 		}.bind(this));
 
 		connectionCoordinatesTemp = {};
