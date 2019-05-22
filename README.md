@@ -1,7 +1,7 @@
 ## "Simple Tree" is a library to create an hierarchical tree using svg
 *Short video of usage* https://drive.google.com/file/d/1mpVtnx56nueAdasNLQOliJ824IzuDJfE/view
 
-***It is not finished yet. The next step will be expanding `createNode` function to create nodes (elements) with different settings***  
+***It is not finished yet. The next step will be expanding `createNode` function (which is hardcoded now intentionally) to create nodes (elements) with different settings (rect, circle etc.)***  
 
 ### All the code you need (which you've seen in the video), using this library, is:
 ```
@@ -18,8 +18,8 @@ document.querySelector('button.create-new-element').addEventListener('click', ST
 document.querySelector('button.connect-elements').addEventListener('click', ST.createConnection);
 
 dragOptions = {
-	horizontal : true, // if the param will be false, nodes will not be drugged on X coordinate
-	vertical : true // if the param will be false, nodes will not be drugged only on Y coordinate
+	horizontal : true, // if the param will be false, nodes will not be drugged on X axis
+	vertical : true // if the param will be false, nodes will not be drugged only on Y axis
 }
 ST.drag(dragOptions);
 ```
