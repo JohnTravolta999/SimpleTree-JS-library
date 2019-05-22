@@ -26,6 +26,8 @@ ST.drag(dragOptions);
 
 ***The library itself is in the file simpleTree.js***
 
+###After you build the tree you can export some data, here it is how to do it:
+
 #### You can get "Nodes to connections" info by using `ST.nodesToConnections`. The structure of it:
 ```
 nodeID_1: Array [ connectionID_1_1, connectionID_1_2 ],
