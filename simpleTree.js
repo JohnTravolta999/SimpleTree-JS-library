@@ -3,19 +3,19 @@ function simpleTree(dragOptions) {
 	const SVGURL = 'http://www.w3.org/2000/svg';
 	const svg = document.getElementsByTagName('svg')[0];
 
-	var draggingHorizontal = true;
-	var draggingVertical = true;
+	let draggingHorizontal = true;
+	let draggingVertical = true;
 	const draggingDefault = {
 		horizontal : true,
 		vertical : true
 	}
 
 	/* Connections start */
-	var connection = true;
-	var connectionCoordinatesStart;
-	var connectionCoordinatesEnd;
-	var connectionCoordinatesTemp = {};
-	var moveConnectionsTemp = {};
+	let connection = true;
+	let connectionCoordinatesStart;
+	let connectionCoordinatesEnd;
+	let connectionCoordinatesTemp = {};
+	let moveConnectionsTemp = {};
 
 	this.connections = {};
 	this.nodesToConnections = {};
@@ -51,8 +51,8 @@ function simpleTree(dragOptions) {
 
 		let x1 = connectionCoordinatesStart.gCenterX;
 		let y1 = connectionCoordinatesStart.gCenterY;
-		var x2;
-		var y2
+		let x2;
+		let y2
 
 		if(connection === true && toDataID !== fromDataID) { // If we finished path ON the another element
 			let g = document.querySelector('g[data-id="' + fromDataID + '"]');
@@ -111,7 +111,7 @@ function simpleTree(dragOptions) {
 		document.body.addEventListener('mouseup', finish);
 	}
 
-	var start = (e) => {
+	let start = (e) => {
 		let dataID = e.target.getAttribute('data-id');
 		if(dataID) {
 			svg.setAttribute('data-id', dataID);
@@ -127,9 +127,9 @@ function simpleTree(dragOptions) {
 
 				// Block of code to get all existing connections and set x/y axis that have to be static while dragging a node
 				if(this.nodesToConnections[dataID] && this.connections) {
-					var staticX;
-					var staticY;
-					var init; // just switcher to define to/from in moveConnectionWithNode function
+					let staticX;
+					let staticY;
+					let init; // just switcher to define to/from in moveConnectionWithNode function
 					this.nodesToConnections[dataID].forEach(function(connection, index) {
 						if(this.connections[connection].fromNodeID == dataID) { // from dataID
 							staticX = this.connections[connection].x2;
@@ -157,16 +157,16 @@ function simpleTree(dragOptions) {
 		}
 	}
 
-	var moveConnectionWithNode = (g) => {
+	let moveConnectionWithNode = (g) => {
 
 		let gData = g.getBoundingClientRect();
-		var nodeCoordinates = {
+		let nodeCoordinates = {
 			gCenterX : gData.left + (gData.width / 2),
 			gCenterY : gData.top + (gData.height / 2)
 		}
 
-		for (var key in moveConnectionsTemp) {
-			var x1, y1, x2, y2;
+		for (let key in moveConnectionsTemp) {
+			let x1, y1, x2, y2;
 
 			if(moveConnectionsTemp[key].init == 1) {
 				x1 = moveConnectionsTemp[key].staticX;
@@ -190,7 +190,7 @@ function simpleTree(dragOptions) {
 		}
 	}
 
-	var drawConnection = (connectionDataID, x1, y1, x2, y2) => {
+	let drawConnection = (connectionDataID, x1, y1, x2, y2) => {
 		let oldPath = document.querySelector('path[data-id="' + connectionDataID + '"]');
 		if(oldPath) oldPath.remove();
 		let path = document.createElementNS(SVGURL, 'path');
@@ -213,7 +213,7 @@ function simpleTree(dragOptions) {
 	}
 
 
-	var move = (e) => {
+	let move = (e) => {
 		let startClientX = Number(svg.getAttribute('clientX'));
 		let startClientY = Number(svg.getAttribute('clientY'));
 
@@ -240,7 +240,7 @@ function simpleTree(dragOptions) {
 		if(moveConnectionsTemp) moveConnectionWithNode(g);
 	}
 
-	var finish = (e) => {
+	let finish = (e) => {
 		document.body.removeEventListener("mousemove",  move);
 
 		let dataID = e.target.getAttribute('data-id');
@@ -264,7 +264,7 @@ function simpleTree(dragOptions) {
 	}
 
 
-	var finishConnection = (toDataID) => {
+	let finishConnection = (toDataID) => {
 		let fromDataID = svg.getAttribute('data-id');
 		let path = document.querySelector('path[data-id="' + fromDataID + '"]');
 		let newPathID = getRandHash();
@@ -283,8 +283,8 @@ function simpleTree(dragOptions) {
 		this.denyConnection();
 	}
 
-	var setConnectionsData = (fromDataID, toDataID, pathID) => {
-		var gArr = [fromDataID, toDataID];
+	let setConnectionsData = (fromDataID, toDataID, pathID) => {
+		let gArr = [fromDataID, toDataID];
 
 		this.connections[pathID] = {
 			fromNodeID : fromDataID,
@@ -296,8 +296,8 @@ function simpleTree(dragOptions) {
 		};
 
 		gArr.forEach(function(g, i) {
-			var baseID = i === 0 ? fromDataID : toDataID;
-			var connectedID = i === 0 ? toDataID : fromDataID;
+			let baseID = i === 0 ? fromDataID : toDataID;
+			let connectedID = i === 0 ? toDataID : fromDataID;
 
 			// We have such order (first pathIDs, then connections), because it can be that
 			// we will have references from one node to another and vice versa several times
