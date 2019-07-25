@@ -13,7 +13,7 @@
 </div>
 
 /*** JavaScript (custom.js) ***/
-var ST = new simpleTree();
+let ST = new simpleTree();
 document.querySelector('button.create-new-element').addEventListener('click', ST.createNode);
 document.querySelector('button.connect-elements').addEventListener('click', ST.createConnection);
 
